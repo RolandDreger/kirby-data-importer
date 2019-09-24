@@ -1,0 +1,76 @@
+title: Import Data Subpage
+
+columns:
+    # Portrait
+    image:
+        width: 1/4
+        sections:
+            image:
+                type: fields
+                fields:
+                    portrait:
+                        type: files
+                        label: Portrait
+                        layout: cards
+                        size: tiny
+                        query: site.find('image-files').images
+                        max: 1
+                        image:
+                            cover: true
+                            ratio: 1/1
+                            multiple: false
+    # Data input
+    data:
+        width: 3/4
+        sections:
+            content:
+                type: fields
+                fields:
+                    first_name:
+                        type: text
+                        label: First Name
+                        width: 1/2
+                    last_name:
+                        type: text
+                        label: Last Name
+                        width: 1/2
+                    jobtitle:
+                        type: text
+                        label: Job Title
+                        width: 1/1
+                    company:
+                        type: text
+                        label: Company
+                        width: 1/1
+                    street:
+                        type: text
+                        label: Street
+                        width: 1/1
+                    postcode:
+                        type: text
+                        label: ZIP
+                        width: 1/3
+                    state:
+                        type: text
+                        label: State
+                        width: 2/3
+                    phone:
+                        type: tel
+                        label: Phone
+                        width: 1/2
+                    fax:
+                        type: tel
+                        label: Fax
+                        width: 1/2
+                    email:
+                        type: text
+                        label: Email
+                        width: 1/1
+                        placeholder: ""
+                        icon: email
+                    website:
+                        type: text
+                        label: Website
+                        before: https://
+                        placeholder: ""
+                        icon: url  
