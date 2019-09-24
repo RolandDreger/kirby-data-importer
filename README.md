@@ -22,6 +22,7 @@ Or you can install it with composer: **composer require rd/data-importer**
 ### 2.1 Blueprint
 #### Page with import data field
 
+```yaml
     title: Import Data Field Page
 
     columns:
@@ -55,6 +56,7 @@ Or you can install it with composer: **composer require rd/data-importer**
                     headline: "Data files"
                     layout: list
                     template: data_files
+```
 
 #### Subpages (records)
 The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table.
@@ -119,6 +121,7 @@ The **field names** in the blueprint for subpages correspond to the **column lab
  </tr>
 </table>
 
+```yaml
     columns:
         # Portrait
         image:
@@ -193,7 +196,8 @@ The **field names** in the blueprint for subpages correspond to the **column lab
                             before: https://
                             placeholder: ""
                             icon: url  
-                            
+```
+
 ### 2.2 Options
 You can find these settings in the file **index.php**
 #### Default import mode: String »update« or »skip« 
