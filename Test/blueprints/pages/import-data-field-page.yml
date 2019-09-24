@@ -5,9 +5,9 @@ columns:
         width: 2/3
         sections:
             #list of subpages
-            card_pages:
+            subpages:
                 type: pages
-                headline: Cards
+                headline: List of Subpages
                 empty: No cards yet
                 layout: list
                 status: all
