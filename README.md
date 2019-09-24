@@ -5,7 +5,7 @@ Kirby 3 plugin for data import and generating subpages
 
 ## Overview
 
-[![Vimeo video to Kirby Data Importer](https://raw.githubusercontent.com/RolandDreger/Images/master/Kirby_Data_Importer_Vimeo.png)](https://vimeo.com/360116607)
+[![Vimeo video to Kirby Plugin Data Importer](https://raw.githubusercontent.com/RolandDreger/Images/master/Kirby_Data_Importer_Vimeo.png)](https://vimeo.com/360116607)
 
 
 This plugin can read CSV files and create individual subpages from the data they contain. 
@@ -13,9 +13,9 @@ This plugin can read CSV files and create individual subpages from the data they
 
 ## 1. Installation
 
-Download and copy this repository to /site/plugins/data-importer
+Download and copy this repository to **/site/plugins/data-importer**
 
-Or you can install it with composer: composer require rd/data-importer
+Or you can install it with composer: **composer require rd/data-importer**
 
 
 ## 2. Usage
@@ -59,6 +59,66 @@ Or you can install it with composer: composer require rd/data-importer
 
 #### Subpages (records)
 The **field names** in the blueprint correspond to the **column labels** in the CSV table.
+
+<table>
+ <tr>
+  <td>first_name</td>
+  <td>last_name</td>
+  <td>jobtitle</td>
+  <td>company</td>
+  <td>street</td>
+  <td>postcode</td>
+  <td>state</td>
+  <td>phone</td>
+  <td>fax</td>
+  <td>email</td>
+  <td>website</td>
+  <td>portrait</td>
+  <td></td>
+ </tr>
+ <tr>
+  <td>Michael</td>
+  <td>Collins</td>
+  <td>Command Module Pilot</span></td>
+  <td>NASA Headquarters</span></td>
+  <td>300 E. Street SW, Suite 5R30</span></td>
+  <td>DC 20546</td>
+  <td>Washington</td>
+  <td>(202) 358-0001</span></td>
+  <td>(202) 358-4338</span></td>
+  <td>michael.colli ns@nasa.gov</span></td>
+  <td>https://www.nasa.gov</span></td>
+  <td>michael_collins.jpg</td>
+ </tr>
+ <tr>
+  <td>Edwin E.</td>
+  <td>Aldrin</td>
+  <td>Lunar Module Pilot</span></td>
+  <td>NASA Headquarters</span></td>
+  <td>300 E. Street SW, Suite 5R30</span></td>
+  <td>DC 20546</td>
+  <td>Washington</td>
+  <td>(202) 358-0001</span></td>
+  <td>(202) 358-4338</span></td>
+  <td>edwin.e.aldrin@nasa.gov</span></td>
+  <td>https://www.nasa.gov</span></td>
+  <td>buzz_aldrin.jpg</td>
+ </tr>
+ <tr>
+  <td>Neil A.</td>
+  <td><span style='mso-spacerun:yes'> </span>Armstrong</td>
+  <td>Commander</td>
+  <td>NASA Headquarters</span></td>
+  <td>300 E. Street SW, Suite 5R30</span></td>
+  <td>DC 20546</td>
+  <td>Washington</td>
+  <td>(202) 358-0001</span></td>
+  <td>(202) 358-4338</span></td>
+  <td>neil.a.armstrong@nasa.gov</span></td>
+  <td>https://www.nasa.gov</span></td>
+  <td>neil_armstrong.jpg</td>
+ </tr>
+</table>
 
     columns:
         # Portrait
@@ -136,7 +196,7 @@ The **field names** in the blueprint correspond to the **column labels** in the 
                             icon: url  
                             
 ### 2.2 Options
-
+You can find these settings in the file **index.php**
 #### Default import mode: String »update« or »skip« 
 If options field is hidden or value is unset.
 
@@ -167,12 +227,12 @@ Do NOT use »,« here!
 
 #### Field names for creating subpage title: Array of strings
 
-    'title_key_array' => ['first_name','last_name'], 
+    'title_key_array' => ['first_name','last_name'] 
 
 
 #### Slug of image page (optional): String
 
-    'image_page_slug' => 'image-files',
+    'image_page_slug' => 'image-files'
 
 
 #### Name of image field (optional): String 
