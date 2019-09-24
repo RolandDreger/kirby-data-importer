@@ -5,7 +5,7 @@ Kirby 3 plugin for data import and generating subpages
 
 ## Overview
 
-[![Vimeo video to Kirby Plugin Data Importer](https://raw.githubusercontent.com/RolandDreger/Images/master/Kirby_Data_Importer_Vimeo.png)](https://vimeo.com/360116607)
+[![Vimeo video to Kirby Plugin Data Importer](https://user-images.githubusercontent.com/19747449/65554134-f98d8c80-df28-11e9-8140-23114fd88a1d.png)](https://vimeo.com/360116607)
 
 
 This plugin can read CSV files and create individual subpages from the data they contain. 
