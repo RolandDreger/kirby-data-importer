@@ -57,7 +57,7 @@ Or you can install it with composer: **composer require rd/data-importer**
                     template: data_files
 
 #### Subpages (records)
-The **field names** in the blueprint correspond to the **column labels** in the CSV table.
+The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table.
 
 <table>
  <tr>
