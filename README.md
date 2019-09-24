@@ -29,10 +29,9 @@ Or you can install it with composer: **composer require rd/data-importer**
             width: 2/3
             sections:
                 #list of subpages
-                card_pages:
+                subpages:
                     type: pages
-                    headline: Cards
-                    empty: No cards yet
+                    headline: List of Subpages
                     layout: list
                     status: all
         sidebar:
