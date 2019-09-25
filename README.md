@@ -20,7 +20,9 @@ Or you can install it with composer: **composer require rd/data-importer**
 
 ## 2. Usage
 
-### 2.1 Insert field in blueprint of preferred page 
+### 2.1 Insert field
+
+Blueprint of preferred main page
 
 ```yaml
 fields:
@@ -38,26 +40,29 @@ fields:
     options_help: ""
 ```
 
-### 2.3 Display of options field
+### 2.3 Set visibility of options field
 
 ```yaml
     options_disabled: false
 ```
 
-### 2.4 Define page section with generated subpages 
-(for reload after import)
+### 2.4 Define page section 
+
+For reload page section after generate subpages.
 
 ```yaml
     subpage_section: "pages"
 ```
 
-### 2.5 Template for generated subpages
+### 2.5 Define template for generated subpages
+
+Name of php file in /site/templates
 
 ```yaml
     subpage_template: "subpage"
 ```
 
-### 2.6 Status for subpages 
+### 2.6 Set status for generated subpages 
 
 Values: »listed«, »unlisted« or »draft«
 
@@ -65,9 +70,9 @@ Values: »listed«, »unlisted« or »draft«
     subpage_status: "unlisted"
 ```
 
-### 2.7  Field names for subpage title 
+### 2.7 Define field names for subpage title 
 
-Array of strings: Column labels in CSV table. (see 3.2 Data file)
+Array of strings: Column labels in CSV table (see 3.2 Data file)
 
 ```yaml
     title_key_array: ["first_name","last_name"]
@@ -75,13 +80,15 @@ Array of strings: Column labels in CSV table. (see 3.2 Data file)
 
 ### 2.8 Slug of image page (optional)
 
-The images can be uploaded to a separate page and inserted from there.
+The images can be uploaded to a separate page and fetched from there.
 
 ```yaml
     image_page_slug: "image-files"
 ```
 
-### 2.9 Name of image field on blueprint of main page (optional) 
+### 2.9 Name of image field (optional) 
+
+Field name in blueprint of main page
 
 ```yaml
     image_field_name: "portrait"
@@ -89,8 +96,8 @@ The images can be uploaded to a separate page and inserted from there.
 
 
 
-## 3. Example
-### 3.1 Blueprint main page
+## 3. Examples
+### 3.1 Blueprint Main Page
 Page with import data field
 
 #### fieldpage.yml
@@ -124,7 +131,7 @@ fields:
 ### 3.2 Data file
 The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table.
 
-#### CSV-Table
+#### data_file.csv
 
 <table>
  <tr>
@@ -145,49 +152,49 @@ The **field names** in the blueprint for subpages correspond to the **column lab
  <tr>
   <td>Michael</td>
   <td>Collins</td>
-  <td>Command Module Pilot</span></td>
-  <td>NASA Headquarters</span></td>
-  <td>300 E. Street SW, Suite 5R30</span></td>
+  <td>Command Module Pilot</td>
+  <td>NASA Headquarters</td>
+  <td>300 E. Street SW, Suite 5R30</td>
   <td>DC 20546</td>
   <td>Washington</td>
-  <td>(202) 358-0001</span></td>
-  <td>(202) 358-4338</span></td>
-  <td>michael.colli ns@nasa.gov</span></td>
-  <td>https://www.nasa.gov</span></td>
+  <td>(202) 358-0001</td>
+  <td>(202) 358-4338</td>
+  <td>michael.colli ns@nasa.gov</td>
+  <td>https://www.nasa.gov</td>
   <td>michael_collins.jpg</td>
  </tr>
  <tr>
   <td>Edwin E.</td>
   <td>Aldrin</td>
-  <td>Lunar Module Pilot</span></td>
-  <td>NASA Headquarters</span></td>
-  <td>300 E. Street SW, Suite 5R30</span></td>
+  <td>Lunar Module Pilot</td>
+  <td>NASA Headquarters</td>
+  <td>300 E. Street SW, Suite 5R30</td>
   <td>DC 20546</td>
   <td>Washington</td>
-  <td>(202) 358-0001</span></td>
-  <td>(202) 358-4338</span></td>
-  <td>edwin.e.aldrin@nasa.gov</span></td>
-  <td>https://www.nasa.gov</span></td>
+  <td>(202) 358-0001</td>
+  <td>(202) 358-4338</td>
+  <td>edwin.e.aldrin@nasa.gov</td>
+  <td>https://www.nasa.gov</td>
   <td>buzz_aldrin.jpg</td>
  </tr>
  <tr>
   <td>Neil A.</td>
-  <td><span style='mso-spacerun:yes'> </span>Armstrong</td>
+  <td>Armstrong</td>
   <td>Commander</td>
-  <td>NASA Headquarters</span></td>
-  <td>300 E. Street SW, Suite 5R30</span></td>
+  <td>NASA Headquarters</td>
+  <td>300 E. Street SW, Suite 5R30</td>
   <td>DC 20546</td>
   <td>Washington</td>
-  <td>(202) 358-0001</span></td>
-  <td>(202) 358-4338</span></td>
-  <td>neil.a.armstrong@nasa.gov</span></td>
-  <td>https://www.nasa.gov</span></td>
+  <td>(202) 358-0001</td>
+  <td>(202) 358-4338</td>
+  <td>neil.a.armstrong@nasa.gov</td>
+  <td>https://www.nasa.gov</td>
   <td>neil_armstrong.jpg</td>
  </tr>
 </table>
 
 
-### 3.3 Subpages
+### 3.3 Blueprint Subpages
 Pages with data from CSV file.
 
 #### subpage.yml
@@ -273,13 +280,13 @@ Pages with data from CSV file.
 ## 4 Options
 You can find these settings in the file **index.php**
 
-### Default import mode: String »update« or »skip« 
+### 4.1 Default import mode: String »update« or »skip« 
 If options field is hidden or value is unset.
 
     'default_import_mode' => 'skip' 
 
 
-### Field separator in CSV file: String
+### 4.2 Field separator in CSV file: String
 Image name separator in CSV file is »,« (without space).
 Do NOT use »,« here!
 
