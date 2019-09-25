@@ -23,8 +23,6 @@ Or you can install it with composer: **composer require rd/data-importer**
 ### 2.1 Insert field in blueprint of preferred page 
 
 ```yaml
-title: Field page
-preset: page
 fields:
   import_data:
     type: import_data
@@ -36,20 +34,58 @@ fields:
     button_headline: "Data Import"
     button_label: "Select data file ..."
     button_help: ""
-    options_disabled: false
     options_headline: "Options"
     options_help: ""
 ```
 
-### 2.3 Define page section with generated subpages 
+### 2.3 Display of options field
+
+```yaml
+    options_disabled: false
+```
+
+### 2.4 Define page section with generated subpages 
 (for reload after import)
 
 ```yaml
-    #Page section with generated subpages (for reload)
     subpage_section: "pages"
 ```
 
-### 2.4  
+### 2.5 Template for generated subpages
+
+```yaml
+    subpage_template: "subpage"
+```
+
+### 2.6 Status for subpages 
+
+Values: »listed«, »unlisted« or »draft«
+
+```yaml
+    subpage_status: "unlisted"
+```
+
+### 2.7  Field names for subpage title 
+
+Array of strings: Column labels in CSV table. (see 3.2 Data file)
+
+```yaml
+    title_key_array: ["first_name","last_name"]
+```
+
+### 2.8 Slug of image page (optional)
+
+The images can be uploaded to a separate page and inserted from there.
+
+```yaml
+    image_page_slug: "image-files"
+```
+
+### 2.9 Name of image field on blueprint of main page (optional) 
+
+```yaml
+    image_field_name: "portrait"
+```
 
 
 
