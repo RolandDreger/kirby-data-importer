@@ -8,7 +8,7 @@ Kirby 3 plugin for data import and generating subpages
 [![Vimeo video to Kirby Plugin Data Importer](https://user-images.githubusercontent.com/19747449/65554134-f98d8c80-df28-11e9-8140-23114fd88a1d.png)](https://vimeo.com/360116607)
 
 
-This plugin imorts data from a CSV file and creates subpages from that. 
+This plugin imorts data from a CSV file and creates subpages of it. 
 
 
 ---
@@ -199,7 +199,7 @@ The **field names** in the blueprint for subpages correspond to the **column lab
 
 
 ### 3.3 Blueprint Subpages
-Pages with data from CSV file.
+Pages that are populated with data from the CSV file.
 
 #### subpage.yml
 
@@ -285,13 +285,13 @@ Pages with data from CSV file.
 ## 4 Options
 You can find these settings in the file **index.php**
 
-### 4.1 Default import mode: String »update« or »skip« 
-If options field is hidden or value is unset.
+### 4.1 Default import mode 
+Values: »update« or »skip«. Setting if options field is hidden or value is unset.
 
     'default_import_mode' => 'skip' 
 
 
-### 4.2 Field separator in CSV file: String
+### 4.2 Field separator in CSV file
 Image name separator in CSV file is »,« (without space).
 Do NOT use »,« here!
 
