@@ -1,0 +1,15 @@
+{
+    "name": "rd/data-importer",
+    "description": "Import data from CSV file and generate subpages",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roland Dreger",
+            "email": "roland.dreger@a1.net"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    }
+}
