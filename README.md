@@ -22,44 +22,38 @@ Or you can install it with composer: **composer require rd/data-importer**
 ### 2.1 Blueprint
 #### Page with import data field
 
-```yaml
-    title: Import Data Field Page
+**Example:** fieldpage.yml
 
-    columns:
-        main:
-            width: 2/3
-            sections:
-                #list of subpages
-                subpages:
-                    type: pages
-                    headline: List of Subpages
-                    layout: list
-                    status: all
-        sidebar:
-            width: 1/3
-            sections:
-                #import data field
-                import_data:
-                    type: fields
-                    fields:
-                        import_data:
-                            type: import_data
-                            button_headline: "Data Import"
-                            button_label: "Select data file ..."
-                            button_help: ""
-                            options_disabled: false
-                            options_headline: "Options"
-                            options_help: ""
-                #list of data files
-                data_files:
-                    type: files
-                    headline: "Data files"
-                    layout: list
-                    template: data_files
+```yaml
+title: Field page
+preset: page
+fields:
+  import_data:
+    type: import_data
+    button_headline: "Data Import"
+    button_label: "Select data file ..."
+    button_help: ""
+    options_disabled: false
+    options_headline: "Options"
+    options_help: ""
+    #Page section with generated subpages (for reload)
+    subpage_section: "pages"
+    # Template for generated subpages
+    subpage_template: "subpage"
+    # Status for subpages (Values: »listed«, »unlisted« or »draft«)
+    subpage_status: "unlisted"
+    # Field names for subpage title (Array of strings: Column labels in CSV table)
+    title_key_array: ["first_name","last_name"]
+    # Slug of image page (optional)
+    image_page_slug: "image-files"
+    # Name of image field (optional) 
+    image_field_name: "portrait"
 ```
 
 #### Subpages (records)
 The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table.
+
+**Example:** CSV-Table
 
 <table>
  <tr>
@@ -120,6 +114,8 @@ The **field names** in the blueprint for subpages correspond to the **column lab
   <td>neil_armstrong.jpg</td>
  </tr>
 </table>
+
+**Example:** subpage.yml
 
 ```yaml
     columns:
@@ -206,41 +202,11 @@ If options field is hidden or value is unset.
     'default_import_mode' => 'skip' 
 
 
-#### Page section: String
-Field name in blueprint.
-
-    'page_section_name' => 'subpages'
-
-
-#### Template for generated subpages: String
-
-    'page_template' => 'import-data-subpage'
-
-
-#### Default status for generated subpages: String »listed«, »unlisted« or »draft« 
-
-    'page_status' => 'listed' 
-
 #### Field separator in CSV file: String
 Image name separator in CSV file is »,« (without space).
 Do NOT use »,« here!
 
-    'delimiter' => ";" 
-
-
-#### Field names for creating subpage title: Array of strings
-
-    'title_key_array' => ['first_name','last_name'] 
-
-
-#### Slug of image page (optional): String
-
-    'image_page_slug' => 'image-files'
-
-
-#### Name of image field (optional): String 
-
-    'image_field_name' => 'portrait'  
+    'delimiter' => ";"
 
 
 ## 3 Credits
