@@ -8,7 +8,10 @@ Kirby 3 plugin for data import and generating subpages
 [![Vimeo video to Kirby Plugin Data Importer](https://user-images.githubusercontent.com/19747449/65554134-f98d8c80-df28-11e9-8140-23114fd88a1d.png)](https://vimeo.com/360116607)
 
 
-This plugin can read CSV files and create individual subpages from the data they contain. 
+This plugin imorts data from a CSV file and creates subpages from that. 
+
+
+---
 
 
 ## 1. Installation
@@ -16,6 +19,7 @@ This plugin can read CSV files and create individual subpages from the data they
 Download and copy this repository to **/site/plugins/data-importer**
 
 Or you can install it with composer: **composer require rd/data-importer**
+
 
 
 ## 2. Usage
@@ -129,7 +133,7 @@ fields:
 ```
 
 ### 3.2 Data file
-The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table.
+The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table. If there is more than one image, the image file names are separated by commas (without spaces).
 
 #### data_file.csv
 
@@ -277,6 +281,7 @@ Pages with data from CSV file.
 ```
 
 
+
 ## 4 Options
 You can find these settings in the file **index.php**
 
@@ -293,9 +298,11 @@ Do NOT use »,« here!
     'delimiter' => ";"
 
 
+
 ## 5. Credits
 
 Based on [Kirby CSV Handler](https://github.com/texnixe/kirby-csv-handler) (Kirby 2) with some inspirations from Plugin [Kirby Link Field](https://github.com/OblikStudio/kirby-link-field) and other great plugins. Thanks to all!
+
 
 
 ## 6. Notice
@@ -305,9 +312,11 @@ This plugin is provided »as is«. Use it at your own risk. Please test the plug
 Feedback is welcome.
 
 
+
 ## 7. License
 
 [MIT](http://www.opensource.org/licenses/mit-license.php)
+
 
 
 ## 8. Authors
