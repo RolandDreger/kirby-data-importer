@@ -1,15 +1,1 @@
-.import-button {
-  margin-bottom: 2rem;
-}
-
-.import-button .k-button-text {
-  font-size: 1rem;
-  color: #000000;
-  margin-bottom: 1rem;
-}
-
-.import-mode-radio ul li {
-  display: inline-block;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-}
+.import-button{margin-bottom:2rem}.import-button .k-button-text{font-size:1rem;color:#000;margin-bottom:1rem}.import-mode-radio ul li{display:inline-block;padding-right:1.5rem;padding-left:1.5rem}
