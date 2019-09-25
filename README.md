@@ -19,10 +19,45 @@ Or you can install it with composer: **composer require rd/data-importer**
 
 
 ## 2. Usage
-### 2.1 Blueprint
-#### Page with import data field
 
-**Example:** fieldpage.yml
+### 2.1 Insert field in blueprint of preferred page 
+
+```yaml
+title: Field page
+preset: page
+fields:
+  import_data:
+    type: import_data
+```
+
+### 2.2 Define field labels
+
+```yaml
+    button_headline: "Data Import"
+    button_label: "Select data file ..."
+    button_help: ""
+    options_disabled: false
+    options_headline: "Options"
+    options_help: ""
+```
+
+### 2.3 Define page section with generated subpages 
+(for reload after import)
+
+```yaml
+    #Page section with generated subpages (for reload)
+    subpage_section: "pages"
+```
+
+### 2.4  
+
+
+
+## 3. Example
+### 3.1 Blueprint main page
+Page with import data field
+
+#### fieldpage.yml
 
 ```yaml
 title: Field page
@@ -50,10 +85,10 @@ fields:
     image_field_name: "portrait"
 ```
 
-#### Subpages (records)
+### 3.2 Data file
 The **field names** in the blueprint for subpages correspond to the **column labels** in the CSV table.
 
-**Example:** CSV-Table
+#### CSV-Table
 
 <table>
  <tr>
@@ -115,7 +150,11 @@ The **field names** in the blueprint for subpages correspond to the **column lab
  </tr>
 </table>
 
-**Example:** subpage.yml
+
+### 3.3 Subpages
+Pages with data from CSV file.
+
+#### subpage.yml
 
 ```yaml
     columns:
@@ -194,39 +233,41 @@ The **field names** in the blueprint for subpages correspond to the **column lab
                             icon: url  
 ```
 
-### 2.2 Options
+
+## 4 Options
 You can find these settings in the file **index.php**
-#### Default import mode: String »update« or »skip« 
+
+### Default import mode: String »update« or »skip« 
 If options field is hidden or value is unset.
 
     'default_import_mode' => 'skip' 
 
 
-#### Field separator in CSV file: String
+### Field separator in CSV file: String
 Image name separator in CSV file is »,« (without space).
 Do NOT use »,« here!
 
     'delimiter' => ";"
 
 
-## 3 Credits
+## 5. Credits
 
 Based on [Kirby CSV Handler](https://github.com/texnixe/kirby-csv-handler) (Kirby 2) with some inspirations from Plugin [Kirby Link Field](https://github.com/OblikStudio/kirby-link-field) and other great plugins. Thanks to all!
 
 
-## 4 Notice
+## 6. Notice
 
 This plugin is provided »as is«. Use it at your own risk. Please test the plugin carefully before using it in your production environment.
 
 Feedback is welcome.
 
 
-## 5 License
+## 7. License
 
 [MIT](http://www.opensource.org/licenses/mit-license.php)
 
 
-## 6 Authors
+## 8. Authors
 
 Roland Dreger, www.rolanddreger.net
 
