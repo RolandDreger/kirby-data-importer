@@ -2,6 +2,7 @@
 
 Kirby 3 plugin for data import and generating subpages
 
+**Note:** Unfortunately this plugin no longer works with the current version of Kirby. I hope to find time to update it soon.
 
 ## Preview (on Vimeo)
 
